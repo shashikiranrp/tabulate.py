@@ -55,7 +55,7 @@ def t_print(table, \
     print ("|{footer:^%ds}|" % (len(inter_row_line) - 2)).format(footer=footer_str)
     print title_line
 
-def dumplod(data, table_name = None, footer_str = None):
+def dumplod(data, table_name = None, footer_str = None, show_col = False):
   t = Table()
   for (row_index, row) in enumerate(data):
     t.set_row('row' + str(row_index), dict([(str(col), val) for (col, val) in row.iteritems()]))
