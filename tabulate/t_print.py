@@ -60,4 +60,4 @@ def dumpll(data, table_name = None, footer_str = None):
   for (row_index, row) in enumerate(data):
     t.set_row('row' + str(row_index), dict(map(lambda (col_index, col_val): ('col' + str(col_index), col_val), enumerate(row))))
 
-  t_print(t, table_name, footer_str, show_col = True, col_sort_function = lambda c1, c2: int(c1[3:]) - int(c2[3:]))
+  t_print(t, table_name, footer_str, col_sort_function = lambda c1, c2: int(c1[3:]) - int(c2[3:]))
