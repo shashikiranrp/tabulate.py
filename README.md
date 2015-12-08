@@ -1,5 +1,4 @@
 # tabulate.py
-=============
 Pretty print tables.
 
 Example:
