@@ -60,7 +60,7 @@ def dumplod(data, table_name = None, footer_str = None, show_col = False):
   for (row_index, row) in enumerate(data):
     t.set_row('row' + str(row_index), dict([(str(col), val) for (col, val) in row.iteritems()]))
 
-  t_print(t, table_name, footer_str)
+  t_print(t, table_name, footer_str, show_col = show_col)
 
 def dumplol(data, table_name = None, footer_str = None):
   t = Table()
