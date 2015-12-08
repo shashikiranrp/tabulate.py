@@ -55,12 +55,12 @@ def t_print(table, \
     print ("|{footer:^%ds}|" % (len(inter_row_line) - 2)).format(footer=footer_str)
     print title_line
 
-def dumplod(data, table_name = None, footer_str = None, show_col = False):
+def dumplod(data, table_name = None, footer_str = None, show_col = False ,col_sort_function = None):
   t = Table()
   for (row_index, row) in enumerate(data):
     t.set_row('row' + str(row_index), dict([(str(col), val) for (col, val) in row.iteritems()]))
 
-  t_print(t, table_name, footer_str, show_col = show_col)
+  t_print(t, table_name, footer_str, show_col = show_coli, col_sort_function = col_sort_function)
 
 def dumplol(data, table_name = None, footer_str = None):
   t = Table()
