@@ -56,7 +56,7 @@ def t_print(table, \
     print title_line
 
 def dumplod(data, table_name = None, footer_str = None, show_col = False ,col_sort_function = None):
-  if data == {}:
+  if data == []:
     return
   t = Table()
   for (row_index, row) in enumerate(data):
